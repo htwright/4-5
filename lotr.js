@@ -114,6 +114,3 @@ var strong = characters.filter(function(character){
     return character.attack >= 5;
 });
 console.log(strong);
-//Using the .filter() function, create a new array from characters that ONLY contains characters with attack value above 5.
-
-
