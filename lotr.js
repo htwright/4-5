@@ -75,14 +75,22 @@ var createCharacter = function(name, nickName, race, origin, attack, defense) {
         defense: defense,
         describe: function() {
           console.log(`${this.name} is a ${this.race} from ${this.origin}.`)
-        }
+        },
+        evaluateFight:function(character){
+        let x = this.attack - character.defense;
+        let y = character.attack - this.defense;
+        if (x < 1){
+            x = 0;
+        }if (y < 1){
+            y = 0;
+        }return `Your opponent takes ${x} and you recieve ${y} damage`;
+
+    }        
     }
 };    
 
-var gandalf = createCharacter('Gandalf the White', 'gandalf', 'wizard', 'Middle Earth', 10, 16);
-console.log(gandalf);
-
-
+var characters = [createCharacter('Gandalf the White', 'gandalf', 'wizard', 'Middle Earth', 10, 6),createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2), createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8), createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 6, 8), createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1), createCharacter('Arwen Undomiel', 'Arwen', 'Girl-Elf', 'Girl-Woodland Realm', 6, 8)];
+console.log(characters);
 
 
 
