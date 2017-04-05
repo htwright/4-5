@@ -6,8 +6,7 @@ function personMaker() {
     	return `${this.firstName} ${this.lastName}`;
     }
   };
-    return person;
-
+  return person;
 }
   let test = personMaker()
   let test1 = test.fullName();
