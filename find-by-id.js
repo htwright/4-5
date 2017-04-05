@@ -2,7 +2,6 @@
 //
 //Calling findById([{id: 1, foo: 'bar'}, {id: 2, foo: 'bizz'}], 2) should return {id: 2, foo: 'bizz'}.
 
-
 function findByID(items, idNum){
     let results = {};
     items.forEach(function (item){
@@ -10,7 +9,8 @@ function findByID(items, idNum){
         if (item.id == idNum) {
             results = item;
         }
-    })
+    });
+    
     return results;
 }
 
