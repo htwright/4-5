@@ -106,6 +106,14 @@ var lookForAragorn = function(name) {
 var found = characters.find(lookForAragorn);
 console.log(found);
 
+var hobbits = characters.filter(function(character){
+    return character.race === 'Hobbit';
+});
 
+var strong = characters.filter(function(character){
+    return character.attack >= 5;
+});
+console.log(strong);
+//Using the .filter() function, create a new array from characters that ONLY contains characters with attack value above 5.
 
 
